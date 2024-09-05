@@ -30,3 +30,27 @@ function power(a, b) {
 let p = power(2, 6);
 
 console.log(p);
+
+function reverse(str) {
+  if(str.length === 0) {
+    return ''
+  }
+  return str.substring(str.length - 1) + reverse(str.substring(0,str.length - 1))
+}
+
+let res = reverse('hello')
+
+console.log(res)
+
+function palindrome(str) {
+  if(str.length === 0) {
+    return ''
+  }
+  return str === str.substring(str.length - 1) + reverse(str.substring(0,str.length - 1))
+
+}
+
+let pal = palindrome('racecar')
+
+console.log(pal)
+
